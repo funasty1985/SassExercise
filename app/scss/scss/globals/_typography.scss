@@ -1,0 +1,35 @@
+@use '../util/' as u;
+
+h1, h2, h3{
+    font-weight: 700;
+    line-height: 1.1; // 110%
+    margin-top: 0;  
+}
+
+h1 {
+    // font-size: 28px;
+    // @include u.breakpoint(medium){
+    //     // font-size: 36px 
+    // }
+    // @include u.breakpoint(large){
+    //     // font-size: 42px
+    // }
+    // @include u.breakpoint(large){
+    //     text-align: left;
+    // }
+    // font-size: calc(16px + 2vw);
+
+    font-size: clamp(u.rem(28), u.rem(16) + 2vw, u.rem(40));
+}
+
+h2 {
+    font-size: clamp(u.rem(22), u.rem(14) + 1.5vw, u.rem(36));
+}
+
+p {
+    margin-top: 0
+}
+
+a, a:visited, a:active{
+    text-decoration: none;
+}
